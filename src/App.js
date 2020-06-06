@@ -12,14 +12,6 @@ import Clarifai from 'clarifai';
 import * as constants from './constants';
 
 
-// const CLARIFAI_API_KEY = 'a63056eda9544a82af4f48d565a340b7'
-
-//todo: move this to server-side, as it is baked in at buildtime
-
-// const CLARIFAI_API_KEY = process.env.REACT_APP_CLARIFAI_API_KEY;
-// console.log('CLARIFAI_API_KEY',CLARIFAI_API_KEY);
-
-
 let app = null ;
 
 const ParticlesOptions=
@@ -126,7 +118,6 @@ class App extends Component{
     })
 
     // console.log('onDetectSubmit input',this.state.input);
-    // Clarifai.FACE_DETECT_MODEL=a403429f2ddf4b49b307e318f00e528b
     app.models.predict(Clarifai.FACE_DETECT_MODEL, this.state.input)
     .then(
         response =>{
