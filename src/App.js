@@ -112,7 +112,6 @@ class App extends Component{
   }
 
   onDetectSubmit = () =>{
-    debugger;
     this.setState({
       imageUrl:this.state.input
     })
@@ -161,7 +160,6 @@ class App extends Component{
   }
 
   onSignInComplete =(signInData)=>{
-    debugger;
       const {user,CLARIFAI_API_KEY} = signInData;
       app = new Clarifai.App({
         apiKey: CLARIFAI_API_KEY
