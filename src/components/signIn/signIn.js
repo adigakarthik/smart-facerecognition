@@ -34,9 +34,9 @@ class SignIn extends Component{
         })
         .then(resp=>resp.json())
         .then(data=>{
-            const {status,user,CLARIFAI_API_KEY,message} = data;
+            const {status,user,message} = data;
             if (status === 'success'){
-                this.props.onSignInComplete({user,CLARIFAI_API_KEY});
+                this.props.onSignInComplete({user});
                 this.props.onRouteChange('home');
             }else{
                 console.log("Error: ",message);
