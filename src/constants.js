@@ -1,1 +1,1 @@
-export const BACKEND_SERVER_URL = 'http://localhost:3000'
+export const BACKEND_SERVER_URL = 'https://sb-backend-api.herokuapp.com'
